@@ -1,0 +1,64 @@
+.myContainer {
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.user-menu__btn {
+  border-radius: 20px;
+  height: 60px;
+  padding: 5p 10px;
+}
+.user-menu__btn--primary {
+  background-color: red;
+}
+.user-menu__btn--secondary {
+  background-color: transparent;
+  border: 1px solid red;
+  color: black;
+}
+.user-menu__btn--secondary:hover {
+  color: red;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.body-container__heading {
+  color: #000;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.step-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #F6F6F6;
+}
+.step-section__number {
+  color: var(--White, #FFF);
+  font-family: Roboto;
+  font-size: 14.182px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}/*# sourceMappingURL=main.css.map */
