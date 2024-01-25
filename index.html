@@ -20,23 +20,59 @@
 </head>
 
 <body>
-    <header class="top-nav">
-        <img class="top-nav__logo" />
-
-        <div class="user-menu">
-            <button class="user-menu__btn--secondary">Sign in</button>
-            <button class="user-menu__btn--primary">Sign up</button>
+    <header>
+        <img class="header-img" src="images/logo/ohmyfood_header.svg" alt="ohmyfood">
+        <div class="font-txt font-txt__color align-txt"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span class="align-txt"><p>Islington, London</p></span>
         </div>
     </header>
+
     <main>
+        <section>
+            <span class="hero-title"><h2>Book the meal you want</h2></span>
+            <span class="hero-title__txt"><h3>Discover our carefully selected high-end restaurants</h3></span>
+            <span class="button font-txt"><p>Explore our restaurants</p></span>
+        </section>
+
         <section class="body-container">
             <h2 class="body-container__heading">How it works</h2>
-            <div class="step-section">
+            <div class="step-section align-txt">
                 <span class="step-section__number">1</span><i class="fa fa-mobile" aria-hidden="true"></i>
                 <p>Choose a restaurant</p>
+            </div>
+            <div class="step-section align-txt">
+                <span class="step-section__number">2</span><i class="fa-solid fa-list" aria-hidden="true"></i>
+                <p>Build your meal</p>
+            </div>
+            <div class="step-section align-txt">
+                <span class="step-section__number">3</span><i class="fa-solid fa-store" aria-hidden="true"></i>
+                <p>Enjoy your meal at the restaurant</p>
+            </div>
+        </section>
 
+        <section>
+            <span class="hero-title"><h2>Restaurants</h2></span>
+            <div class="card">
+                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Jay Wennington, NY">
+                <h3>Kitchen West</h3>
+                <p>Angel</p>
             </div>
         </section>
     </main>
-    <footer></footer>
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <img src="images/logo/ohmyfood" alt="ohmyfood">
+        </div>
+        <div class="align-txt">
+            <i class="fa-solid fa-utensils"></i>
+            <span class="font-txt font-txt__footer"><p>Suggest a restaurant</p></span>
+        </div>
+        <div class="align-txt">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <span class="font-txt font-txt__footer"><p>Become a partner</p></span>
+        </div>
+        <span class="font-txt font-txt__footer"><p>Legal notice</p></span>
+        <span class="font-txt font-txt__footer"><p>Contact</p></span>
+    </footer>
 </body>

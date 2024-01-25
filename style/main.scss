@@ -1,7 +1,8 @@
-$primaryColor:  #9356DC;
+$primaryColor: #9356DC;
 $bgSection: white;
 $bgHero: #F6F6F6;
 $bgBanner: #EAEAEA;
+$bgColor: #353535;
 
 @mixin header-2 {
     color: #000;
@@ -12,7 +13,7 @@ $bgBanner: #EAEAEA;
     line-height: normal;
 }
 
-@mixin flexCenter($direction:row) {
+@mixin flexCenter($direction: row) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,32 +21,11 @@ $bgBanner: #EAEAEA;
 }
 
 
-.myContainer {
-    background-color: $primaryColor;
+.header-img {
+    width: 162px;
+    height: 63px;
+    padding: 13px 89px 13px 89px;
     @include flexCenter();
-}
-
-.user-menu {
-    &__btn {
-        border-radius: 20px;
-        height: 60px;
-        padding: 5p 10px;
-
-        &--primary {
-            background-color: red;
-        }
-
-        &--secondary {
-            background-color: transparent;
-            border: 1px solid red;
-
-            color: black;
-
-            &:hover {
-                color: red;
-            }
-        }
-    }
 }
 
 .body-container {
@@ -57,9 +37,27 @@ $bgBanner: #EAEAEA;
     }
 }
 
+.font-txt {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &__color {
+        color: $bgColor;
+    }
+
+    &__footer {
+        color: white;
+    }
+}
+
 .step-section {
-    @include flexCenter();
+    @include flexCenter(column);
     background-color: $bgHero;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 0px #00000026;
 
     &__number {
         color: var(--White, #FFF);
@@ -75,4 +73,58 @@ $bgBanner: #EAEAEA;
         @include flexCenter();
     }
 
+}
+
+.hero-title {
+    @include header-2;
+
+    &__txt {
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        color: $bgColor;
+    }
+}
+
+.button {
+    border:none;
+    background-color:transparent;
+    outline:none;
+    width: 218px;
+    height: 50px;
+    @include flexCenter(row);
+    border-radius: 25px;
+    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+    color: $bgSection;
+}
+
+.card {
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.footer {
+    width: 375px;
+    padding: 22px 25px;
+    background: $bgColor;
+    @include flexCenter(column);
+    align-items: flex-start;
+
+    &__logo {
+        color: var(--White, #FFF);
+        font-family: Shrikhand;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 16px;
+    }
+}
+
+.align-txt {
+    @include flexCenter(row)
 }

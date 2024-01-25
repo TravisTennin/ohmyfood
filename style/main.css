@@ -1,26 +1,11 @@
-.myContainer {
-  background-color: #9356DC;
+.header-img {
+  width: 162px;
+  height: 63px;
+  padding: 13px 89px 13px 89px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-}
-
-.user-menu__btn {
-  border-radius: 20px;
-  height: 60px;
-  padding: 5p 10px;
-}
-.user-menu__btn--primary {
-  background-color: red;
-}
-.user-menu__btn--secondary {
-  background-color: transparent;
-  border: 1px solid red;
-  color: black;
-}
-.user-menu__btn--secondary:hover {
-  color: red;
 }
 
 .body-container {
@@ -39,12 +24,28 @@
   line-height: normal;
 }
 
+.font-txt {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.font-txt__color {
+  color: #353535;
+}
+.font-txt__footer {
+  color: white;
+}
+
 .step-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .step-section__number {
   color: var(--White, #FFF);
@@ -57,6 +58,72 @@
   height: 20px;
   width: 20px;
   background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hero-title {
+  color: #000;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.hero-title__txt {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #353535;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 218px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 25px;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  color: white;
+}
+
+.card {
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.footer {
+  width: 375px;
+  padding: 22px 25px;
+  background: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__logo {
+  color: var(--White, #FFF);
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.align-txt {
   display: flex;
   justify-content: center;
   align-items: center;
