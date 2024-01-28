@@ -3,6 +3,34 @@ $bgSection: white;
 $bgHero: #F6F6F6;
 $bgBanner: #EAEAEA;
 $bgColor: #353535;
+$badgefontColor: #008766;
+$badgebgColor: #99E2D0;
+$boxshadowColor: #0000001a;
+
+@mixin flexCenter($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexStart($direction: row) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexEnd($direction: row) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: $direction;
+}
+/**Create new "flex" mixin without "align-items: center" (what to name it?)**/
+@mixin padding() {
+    padding: 15px;
+}
 
 @mixin header-2 {
     color: #000;
@@ -13,28 +41,30 @@ $bgColor: #353535;
     line-height: normal;
 }
 
-@mixin flexCenter($direction: row) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
+@mixin robotoS14 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
-
-.header-img {
-    width: 162px;
-    height: 63px;
-    padding: 13px 89px 13px 89px;
-    @include flexCenter();
+.main-container {
+    max-width: 100%;
+    text-decoration: none;
 }
 
 .body-container {
-    @include flexCenter(column);
     background-color: $bgSection;
 
     &__heading {
         @include header-2;
+        margin-left: 20px;
     }
+}
+
+.align-txt {
+    @include flexCenter(row)
 }
 
 .font-txt {
@@ -53,26 +83,39 @@ $bgColor: #353535;
     }
 }
 
-.step-section {
-    @include flexCenter(column);
-    background-color: $bgHero;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px 0px #00000026;
+.loc-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 17px;
 
-    &__number {
-        color: var(--White, #FFF);
-        font-family: Roboto;
-        font-size: 14.182px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        border-radius: 50%;
-        height: 20px;
-        width: 20px;
-        background-color: $primaryColor;
-        @include flexCenter();
+    &__container {
+        width: 100%;
+        height: 50px;
     }
 
+    &__bg {
+        background-color: $bgBanner;
+    }
+}
+
+
+.header-img {
+    width: 162px;
+    height: 63px;
+    padding: 13px 89px 13px 89px;
+    @include flexCenter();
+}
+
+.hero-container {
+    width: 100%;
+    height: 375px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #F6F6F6;
 }
 
 .hero-title {
@@ -88,23 +131,85 @@ $bgColor: #353535;
     }
 }
 
+/**Why is hero-title__txt using hero-title styling?**/
+
 .button {
-    border:none;
-    background-color:transparent;
-    outline:none;
+    border: none;
+    background-color: transparent;
+    outline: none;
     width: 218px;
     height: 50px;
     @include flexCenter(row);
     border-radius: 25px;
     background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+    box-shadow: 0px 4px 10px 0px $boxshadowColor;
     color: $bgSection;
 }
 
+.step-section {
+    width: 323px;
+    height: 69px;
+    gap: 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background-color: $bgHero;
+    box-shadow: 0px 4px 10px 0px $boxshadowColor;
+
+    &__number {
+        color: var(--White, #FFF);
+        @include robotoS14;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        background-color: $primaryColor;
+        @include flexCenter();
+    }
+
+}
+
 .card {
-    width: 340px;
-    height: 251px;
+    @include flexCenter(column);
+    width: 346px;
+    height: 231px;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0px 4px 15px 0px $boxshadowColor;
+
+    &--title {
+        color: #000;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &--txt {
+        color: #000;
+        font-family: Roboto;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+}
+
+.badge {
+    width: 80px;
+    height: 29px;
+    text-align: center;
+    @include robotoS14;
+    color: var(--Green-Font, $badgefontColor);
+
+    &__bg {
+        border-radius: 2px;
+        background-color: $badgebgColor;
+        box-shadow: 0px 2px 4px 0px $boxshadowColor; 
+    }
 }
 
 .footer {
@@ -123,8 +228,4 @@ $bgColor: #353535;
         line-height: normal;
         margin-bottom: 16px;
     }
-}
-
-.align-txt {
-    @include flexCenter(row)
 }
