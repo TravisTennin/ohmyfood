@@ -82,6 +82,12 @@
   flex-direction: column;
   background-color: #F6F6F6;
 }
+.hero-container__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 
 .hero-title {
   color: #000;
@@ -128,6 +134,8 @@
   flex-direction: row;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  position: relative;
+  padding-left: 20px;
 }
 .step-section__number {
   color: var(--White, #FFF);
@@ -144,19 +152,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: absolute;
+  left: -10px;
 }
 .step-section__menu {
-  width: 323px;
-  height: 69px;
-  gap: 20px;
-  border-radius: 20px;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
   background-color: white;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
 .card {

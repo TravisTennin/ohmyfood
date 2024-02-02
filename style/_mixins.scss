@@ -1,0 +1,46 @@
+@mixin flexCenter($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexStart($direction: row) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexEnd($direction: row) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+/**Create new "flex" mixin without "align-items: center" (what to name it?)**/
+@mixin padding() {
+    padding: 15px;
+}
+
+@mixin header-2 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@mixin robotoS14 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin imgWidth {
+    width: 100%
+}

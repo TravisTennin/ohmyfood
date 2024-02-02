@@ -1,58 +1,6 @@
-$primaryColor: #9356DC;
-$bgSection: white;
-$bgHero: #F6F6F6;
-$bgBanner: #EAEAEA;
-$bgColor: #353535;
-$badgefontColor: #008766;
-$badgebgColor: #99E2D0;
-$boxshadowColor: #0000001a;
+@import 'variables';
+@import 'mixins';
 
-@mixin flexCenter($direction: row) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-@mixin flexStart($direction: row) {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-@mixin flexEnd($direction: row) {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-/**Create new "flex" mixin without "align-items: center" (what to name it?)**/
-@mixin padding() {
-    padding: 15px;
-}
-
-@mixin header-2 {
-    color: #000;
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-@mixin robotoS14 {
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-@mixin imgWidth {
-    width: 100%
-}
 
 .main-container {
     max-width: 100%;
@@ -128,6 +76,10 @@ $boxshadowColor: #0000001a;
     text-align: center;
     flex-direction: column;
     background-color: #F6F6F6;
+
+    &__menu {
+        @include flexCenter(row);
+    }
 }
 
 .hero-title {
@@ -168,6 +120,9 @@ $boxshadowColor: #0000001a;
     flex-direction: row;
     background-color: $bgHero;
     box-shadow: 0px 4px 10px 0px $boxshadowColor;
+    position: relative;
+    padding-left: 20px;
+
 
     &__number {
         color: var(--White, #FFF);
@@ -177,20 +132,14 @@ $boxshadowColor: #0000001a;
         width: 20px;
         background-color: $primaryColor;
         @include flexCenter();
+
+        position: absolute;
+        left: -10px;
     }
 
+
     &__menu {
-        width: 323px;
-        height: 69px;
-        gap: 20px;
-        border-radius: 20px;
-        margin-bottom: 15px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
         background-color: $bgSection;
-        box-shadow: 0px 4px 10px 0px $boxshadowColor;
     }
 }
 
@@ -277,3 +226,4 @@ $boxshadowColor: #0000001a;
         color: white;
     }
 }
+
