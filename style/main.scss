@@ -24,7 +24,8 @@
 }
 
 .align-txt {
-    @include flexCenter(row)
+    @include flexCenter(row);
+    gap: 7px;
 }
 
 .font-txt {
@@ -184,19 +185,23 @@
     }
 
     & h3 {
-        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 3px;
     }
 }
 
 .badge {
     width: 80px;
     height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     @include robotoS14;
     color: var(--Green-Font, $badgefontColor);
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 13px;
+    right: 4.5px;
 
     &__bg {
         border-radius: 2px;
@@ -226,4 +231,3 @@
         color: white;
     }
 }
-

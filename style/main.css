@@ -32,6 +32,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  gap: 7px;
 }
 
 .font-txt {
@@ -199,12 +200,16 @@
   margin: 0;
 }
 .card h3 {
-  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
 
 .badge {
   width: 80px;
   height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-family: Roboto;
   font-size: 14px;
@@ -213,8 +218,8 @@
   line-height: normal;
   color: var(--Green-Font, #008766);
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 13px;
+  right: 4.5px;
 }
 .badge__bg {
   border-radius: 2px;
