@@ -58,6 +58,7 @@
                 <span class="step-section__number">3</span><i class="fa-solid fa-store" aria-hidden="true"></i>
                 <div class="font-txt">
                     <p>Enjoy your meal at the restaurant</p>
+                    <!-- ^This text is a couple of pixels too far to the right? -->
                 </div>
             </div>
         </section>
@@ -66,13 +67,43 @@
             <div class="hero-title">
                 <h2>Restaurants</h2>
             </div>
+            <!-- How to align cards to the center without moving the header? -->
             <div class="card">
-                <img src="images/restaurants/Kitchen_West.jpg" alt="Kitchen West"><span
-                    class="badge badge__bg">New</span>
-                <div class="card__txt">
-                    <h3 class="card__title">Kitchen West<i class="fa-regular fa-heart"></i></h3>
-                    <p>Angel</p>
+                <img src="images/restaurants/Kitchen_West.jpg" alt="Kitchen West">
+                <span class="badge badge__bg">New</span>
+                <div class="card__container">
+                    <h3 class="card__title">Kitchen West</h3>
+                    <p class="card__txt">Angel</p>
                 </div>
+                <i class="heart__container card__heart fa-regular fa-heart"></i>
+            </div>
+
+            <div class="card">
+                <img src="images/restaurants/Elderflower.jpg" alt="Kitchen West">
+                <span class="badge badge__bg">New</span>
+                <div class="card__container">
+                    <h3 class="card__title">Elderflower</h3>
+                    <p class="card__txt">Old Street</p>
+                </div>
+                <i class="heart__container card__heart fa-regular fa-heart"></i>
+            </div>
+
+            <div class="card">
+                <img src="images/restaurants/Shoreditch_Canteen.jpg" alt="Kitchen West">
+                <div class="card__container">
+                    <h3 class="card__title">Shoreditch Canteen</h3>
+                    <p class="card__txt">Shoreditch</p>
+                </div>
+                <i class="heart__container card__heart fa-regular fa-heart"></i>
+            </div>
+
+            <div class="card">
+                <img src="images/restaurants/The_Bay_Leaf.jpg" alt="Kitchen West">
+                <div class="card__container">
+                    <h3 class="card__title">The Bay Leaf</h3>
+                    <p class="card__txt">Hoxton</p>
+                </div>
+                <i class="heart__container card__heart fa-regular fa-heart"></i>
             </div>
         </section>
     </main>
@@ -85,6 +116,7 @@
             <i class="footer__fa fa-solid fa-utensils"></i>
             <div class="font-txt font-txt__footer">
                 <p>Suggest a restaurant</p>
+                <!-- ^This text needs to align with the text below -->
             </div>
         </div>
         <div class="align-txt">
@@ -101,4 +133,4 @@
         </div>
     </footer>
 </body>
-<!--Move all containers into "main-container" in scss(?)-->
+<!-- Move all containers into "main-container" in scss(?) -->
