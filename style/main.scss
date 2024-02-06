@@ -166,6 +166,12 @@
     box-shadow: 0px 4px 15px 0px $boxshadowColor;
     position: relative;
 
+    &__align {
+        @include flexCenter(column);
+        gap: 18px;
+        padding-bottom: 50px;
+    }
+
     &__container {
         display: flex;
         flex-direction: row;
