@@ -5,3 +5,55 @@
     background-color: #F6F6F6;
     transform: translateY(-100px);
 }
+
+.banner--title {
+    font-family: Shrikhand;
+    font-style: italic;
+    font-weight: 400px;
+    font-size: 28px;
+    line-height: 40px;
+    color: black;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+/**** NEST *****/
+.banner--heart {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 33px;
+    right: 20px;
+}
+
+.menu--li {
+    font-family: Roboto;
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 18px;
+    color: black;
+
+    &__title {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    &__descr {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 17px;
+    }
+
+    &__price {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 17px;
+        color: $bgColor;
+    }
+}

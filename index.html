@@ -41,6 +41,7 @@
         </section>
 
         <section class="body-container">
+<!-- All descriptive text following the icons is pushed further & further by a pixel or so -->
             <h2 class="body-container__heading">How it works</h2>
             <div class="step-section align-txt">
                 <span class="step-section__number">1</span><i class="fa fa-mobile" aria-hidden="true"></i>
@@ -58,15 +59,13 @@
                 <span class="step-section__number">3</span><i class="fa-solid fa-store" aria-hidden="true"></i>
                 <div class="font-txt">
                     <p>Enjoy your meal at the restaurant</p>
-                    <!-- ^This text is a couple of pixels too far to the right? -->
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="card__bgPadding">
                 <h2 class="body-container__heading">Restaurants</h2>
             </div>
-            <!-- How to align cards to the center without moving the header? -->
             <div class="card__align">
             <div class="card">
                 <img src="images/restaurants/Kitchen_West.jpg" alt="Kitchen West">
@@ -75,7 +74,7 @@
                     <h3 class="card__title">Kitchen West</h3>
                     <p class="card__txt">Angel</p>
                 </div>
-                <i class="heart__container card__heart fa-regular fa-heart"></i>
+                <i class="heart__container fa-xl fa-regular fa-heart"></i>
             </div>
 
             <div class="card">
@@ -85,7 +84,7 @@
                     <h3 class="card__title">Elderflower</h3>
                     <p class="card__txt">Old Street</p>
                 </div>
-                <i class="heart__container card__heart fa-regular fa-heart"></i>
+                <i class="heart__container fa-xl fa-regular fa-heart"></i>
             </div>
 
             <div class="card">
@@ -94,7 +93,7 @@
                     <h3 class="card__title">Shoreditch Canteen</h3>
                     <p class="card__txt">Shoreditch</p>
                 </div>
-                <i class="heart__container card__heart fa-regular fa-heart"></i>
+                <i class="heart__container fa-xl fa-regular fa-heart"></i>
             </div>
 
             <div class="card">
@@ -103,7 +102,7 @@
                     <h3 class="card__title">The Bay Leaf</h3>
                     <p class="card__txt">Hoxton</p>
                 </div>
-                <i class="heart__container card__heart fa-regular fa-heart"></i>
+                <i class="heart__container fa-xl fa-regular fa-heart"></i>
             </div>
             </div>
         </section>
@@ -113,14 +112,14 @@
         <div class="footer__logo">
             <img src="images/logo/ohmyfood" alt="ohmyfood">
         </div>
-        <div class="align-txt">
+<!-- TODO: Lessen the gap between text-->
+        <div class="align-txt footer__gap">
             <i class="footer__fa fa-solid fa-utensils"></i>
             <div class="font-txt font-txt__footer">
                 <p>Suggest a restaurant</p>
-                <!-- ^This text needs to align with the text below -->
             </div>
         </div>
-        <div class="align-txt">
+        <div class="align-txt footer__gap">
             <i class="footer__fa fa-solid fa-handshake-angle"></i>
             <div class="font-txt font-txt__footer">
                 <p>Become a partner</p>
@@ -134,4 +133,4 @@
         </div>
     </footer>
 </body>
-<!-- Move all containers into "main-container" in scss(?) -->
+<!-- TODO: Move all containers into "main-container" in scss(?) -->
