@@ -5,10 +5,10 @@
     flex-direction: $direction;
 }
 
-@mixin flexStart($direction: row) {
+@mixin flexStart($direction: row, $align: center) {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: $align;
     flex-direction: $direction;
 }
 

@@ -1,3 +1,7 @@
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
 .menu-container {
     height: 900px;
     border-top-left-radius: 24px;
@@ -5,6 +9,70 @@
     background-color: #F6F6F6;
     transform: translateY(-100px);
 }
+
+.green-tick-box {
+    height: 100%;
+    width: 60px;
+    background-color: #99E2D0;
+    transform: translateX(100%);
+}
+
+
+@keyframes slideToOrigin {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateRight {
+    from {
+        rotate: 180deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.step-section:active {
+    & .green-tick-box {
+        animation: 1s slideToOrigin forwards 1, 1s spin infinite;
+        @include flexCenter(center)
+
+
+    }
+
+    & .green-tick-box>.tick {
+        -webkit-animation: spin 1.2s linear 1;
+        -moz-animation: spin 1.2s linear 1;
+        animation: spin 1.2s linear 1
+    }
+}
+
 
 .banner--title {
     font-family: Shrikhand;

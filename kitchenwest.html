@@ -18,14 +18,14 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/menu.css">
+    <link rel="stylesheet" href="./style/normalize.css">
 </head>
 
-    <body class="main-container">
-        <header class="header-container__menu">
-            <i class="fa-xl fa-solid fa-arrow-left"></i>
-            <img class="header-img" src="images/logo/ohmyfood_header.svg" alt="ohmyfood">
-        </header>
-    </body>
+<body class="main-container">
+    <header class="header-container__menu">
+        <i class="fa-xl fa-solid fa-arrow-left"></i>
+        <img class="header-img" src="images/logo/ohmyfood_header.svg" alt="ohmyfood">
+    </header>
 
     <section>
         <img src="images/restaurants/Kitchen_West.jpg" alt="Kitchen West" style="width: 100%">
@@ -34,84 +34,136 @@
     <section class="menu-container">
         <div class="banner--title">
             <p>Kitchen West</p>
-<!-- TODO: Animate heart -->
+            <!-- TODO: Animate heart -->
             <i class="banner--heart fa-regular fa-heart"></i>
         </div>
-<!-- TODO: Add sub-section titles, mint lines, and adjust line positioning -->
+        <!-- TODO: Add sub-section titles, mint lines, and adjust line positioning -->
         <div class="step-section step-section__menu">
             <div class="step-section__p">
-            <span class="menu--li__title"><h4>Smoked Salmon</span></h4>
-            <span class="menu--li__descr"><p>With beetroot and horseradish dressing</span></p>
-            <span class="menu--li__price"><p>£25</span></p>
+                <h4 class="menu--li__title">Smoked Salmon</h4>
+                <p class="menu--li__descr">With beetroot and horseradish dressing</p>
+                <p class="menu--li__price">£25</p>
+            </div>
+
+            <span class="green-tick-box">
+                <i class="tick fa-regular fa-heart"></i>
+            </span>
+        </div>
+
+        <div class="step-section step-section__menu">
+            <div class="step-section__p">
+                <span class="menu--li__title">
+                    <h4>Ham hock terrine
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>With piccalilli
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£35
+                </span></p>
             </div>
         </div>
 
         <div class="step-section step-section__menu">
             <div class="step-section__p">
-            <span class="menu--li__title"><h4>Ham hock terrine</span></h4>
-            <span class="menu--li__descr"><p>With piccalilli</span></p>
-            <span class="menu--li__price"><p>£35</span></p>
-            </div>
-        </div>
-
-        <div class="step-section step-section__menu">
-            <div class="step-section__p">
-            <span class="menu--li__title"><h4>Poached egg</span></h4>
-            <span class="menu--li__descr"><p>With asparagus and hollandaise</span></p>
-            <span class="menu--li__price"><p>£20</span></p>
-            </div>
-        </div>
-
-
-        <div class="step-section step-section__menu">
-            <div class="step-section__p">
-            <span class="menu--li__title"><h4>Beef fillet with herb butter</span></h4>
-            <span class="menu--li__descr"><p>Served with a vegetable medley</span></p>
-            <span class="menu--li__price"><p>£40</span></p>
-            </div>
-        </div>
-
-        <div class="step-section step-section__menu">
-            <div class="step-section__p">
-            <span class="menu--li__title"><h4>Braised oxtail cottage pie</span></h4>
-            <span class="menu--li__descr"><p>With black truffle and parsnip puree</span></p>
-            <span class="menu--li__price"><p>£35</span></p>
-            </div>
-        </div>
-
-        <div class="step-section step-section__menu">
-            <div class="step-section__p">
-            <span class="menu--li__title"><h4>Fillet of turbot</span></h4>
-            <span class="menu--li__descr"><p>With citrus dressing</span></p>
-            <span class="menu--li__price"><p>£44</span></p>
+                <span class="menu--li__title">
+                    <h4>Poached egg
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>With asparagus and hollandaise
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£20
+                </span></p>
             </div>
         </div>
 
 
         <div class="step-section step-section__menu">
             <div class="step-section__p">
-            <span class="menu--li__title"><h4>Treacle tart</span></h4>
-            <span class="menu--li__descr"><p>With Cornish clotted cream</span></p>
-            <span class="menu--li__price"><p>£18</span></p>
+                <span class="menu--li__title">
+                    <h4>Beef fillet with herb butter
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>Served with a vegetable medley
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£40
+                </span></p>
             </div>
         </div>
 
         <div class="step-section step-section__menu">
             <div class="step-section__p">
-            <span class="menu--li__title"><h4>Lemon posset</span></h4>
-            <span class="menu--li__descr"><p>With shortbread biscuit</span></p>
-            <span class="menu--li__price"><p>£22</span></p>
+                <span class="menu--li__title">
+                    <h4>Braised oxtail cottage pie
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>With black truffle and parsnip puree
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£35
+                </span></p>
             </div>
         </div>
 
         <div class="step-section step-section__menu">
             <div class="step-section__p">
-            <span class="menu--li__title"><h4>Chocolate mousse</span></h4>
-            <span class="menu--li__descr"><p>With a hint of chili and a hazelnut tuile</span></p>
-            <span class="menu--li__price"><p>£23</span></p>
+                <span class="menu--li__title">
+                    <h4>Fillet of turbot
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>With citrus dressing
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£44
+                </span></p>
             </div>
         </div>
-<!-- TODO: Align button to middle -->
+
+
+        <div class="step-section step-section__menu">
+            <div class="step-section__p">
+                <span class="menu--li__title">
+                    <h4>Treacle tart
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>With Cornish clotted cream
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£18
+                </span></p>
+            </div>
+        </div>
+
+        <div class="step-section step-section__menu">
+            <div class="step-section__p">
+                <span class="menu--li__title">
+                    <h4>Lemon posset
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>With shortbread biscuit
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£22
+                </span></p>
+            </div>
+        </div>
+
+        <div class="step-section step-section__menu">
+            <div class="step-section__p">
+                <span class="menu--li__title">
+                    <h4>Chocolate mousse
+                </span></h4>
+                <span class="menu--li__descr">
+                    <p>With a hint of chili and a hazelnut tuile
+                </span></p>
+                <span class="menu--li__price">
+                    <p>£23
+                </span></p>
+            </div>
+        </div>
+        <!-- TODO: Align button to middle -->
         <div class="button font-txt">
             <p>Order</p>
         </div>
@@ -121,14 +173,26 @@
         <div class="footer__logo">
             <img src="images/logo/ohmyfood" alt="ohmyfood">
         </div>
+        <!-- TODO: Fix gap issue on Menu page -->
         <div class="align-txt footer__gap">
             <i class="footer__fa fa-solid fa-utensils"></i>
-            <div class="font-txt font-txt__footer"><p>Suggest a restaurant</p></div>
+            <div class="font-txt font-txt__footer">
+                <p>Suggest a restaurant</p>
+            </div>
         </div>
         <div class="align-txt footer__gap">
             <i class="footer__fa fa-solid fa-handshake-angle"></i>
-            <div class="font-txt font-txt__footer"><p>Become a partner</p></div>
+            <div class="font-txt font-txt__footer">
+                <p>Become a partner</p>
+            </div>
         </div>
-        <div class="font-txt font-txt__footer"><p>Legal notice</p></div>
-        <div class="font-txt font-txt__footer"><p>Contact</p></div>
+        <div class="font-txt font-txt__footer">
+            <p>Legal notice</p>
+        </div>
+        <div class="font-txt font-txt__footer">
+            <p>Contact</p>
+        </div>
     </footer>
+</body>
+
+</html>

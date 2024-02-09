@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'components';
 
 
 .main-container {
@@ -128,6 +129,7 @@
     box-shadow: 0px 4px 10px 0px $boxshadowColor;
     position: relative;
     padding-left: 20px;
+    overflow: hidden;
 
 
     &__number {
@@ -149,7 +151,7 @@
     }
 
     &__p {
-        @include flexStart(column);
+        @include flexStart(column, start);
         padding: 0px;
         margin: 0px;
     }
@@ -253,32 +255,7 @@
     }
 }
 
-.footer {
-    padding: 22px 25px;
-    background: $bgColor;
-    @include flexCenter(column);
-    align-items: flex-start;
 
-    &__logo {
-        color: var(--White, #FFF);
-        font-family: Shrikhand;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-bottom: 16px;
-    }
-
-    &__fa {
-        color: white;
-        width: 11px;
-        height: 13px;
-    }
-
-    &__gap {
-        gap: 15px;
-    }
-}
 
 * {
     outline: 1px red solid !important;

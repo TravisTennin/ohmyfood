@@ -1,9 +1,79 @@
+/**Create new "flex" mixin without "align-items: center" (what to name it?)**/
+.footer {
+  padding: 22px 25px;
+  background: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer__logo {
+  color: var(--White, #FFF);
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.footer__fa {
+  color: white;
+  width: 11px;
+  height: 13px;
+}
+
+.footer__gap {
+  gap: 15px;
+}
+
 .menu-container {
   height: 900px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   background-color: #F6F6F6;
   transform: translateY(-100px);
+}
+
+.green-tick-box {
+  height: 100%;
+  width: 60px;
+  background-color: #99E2D0;
+  transform: translateX(100%);
+}
+
+@keyframes slideToOrigin {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes rotateRight {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.step-section:active .green-tick-box {
+  animation: 1s slideToOrigin forwards 1, 1s spin infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
+}
+.step-section:active .green-tick-box > .tick {
+  animation: spin 1.2s linear 1;
 }
 
 .banner--title {
@@ -46,4 +116,11 @@
   font-size: 15px;
   font-weight: 300;
   line-height: 17px;
+}
+.menu--li__price {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17px;
+  color: #353535;
 }/*# sourceMappingURL=menu.css.map */
