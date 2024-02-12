@@ -39,7 +39,7 @@
 
 .green-tick-box {
   height: 100%;
-  width: 60px;
+  width: 71px;
   background-color: #99E2D0;
   transform: translateX(100%);
 }
@@ -79,7 +79,7 @@
 .banner--title {
   font-family: Shrikhand;
   font-style: italic;
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 28px;
   line-height: 40px;
   color: black;
@@ -100,7 +100,7 @@
 
 .menu--li {
   font-family: Roboto;
-  font-weight: 300px;
+  font-weight: 300;
   font-size: 16px;
   line-height: 18px;
   color: black;
