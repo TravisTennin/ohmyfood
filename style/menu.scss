@@ -142,5 +142,7 @@
         font-weight: 700;
         line-height: 17px;
         color: $bgColor;
+        position: absolute;
+        transform: translateX(100%);
     }
 }

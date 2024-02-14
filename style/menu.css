@@ -142,4 +142,6 @@
   font-weight: 700;
   line-height: 17px;
   color: #353535;
+  position: absolute;
+  transform: translateX(100%);
 }/*# sourceMappingURL=menu.css.map */
