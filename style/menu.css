@@ -30,11 +30,27 @@
 }
 
 .menu-container {
-  height: 900px;
+  height: 1080px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   background-color: #F6F6F6;
   transform: translateY(-100px);
+}
+
+.menu-header {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  text-align: left;
+  padding: 10px 0px 15px 10px;
+}
+.menu-header:after {
+  content: "STARTERS";
+  width: 10%;
+  display: block;
+  padding-top: 10px;
+  border-bottom: 3px solid #99E2D0;
 }
 
 .green-tick-box {
@@ -86,7 +102,10 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
-  padding-left: 20px;
+  padding-left: 10px;
+}
+.banner--title p {
+  margin-top: 28px;
 }
 
 /**** NEST *****/

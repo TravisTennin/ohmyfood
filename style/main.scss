@@ -152,6 +152,8 @@
         @include flexStart(column, start);
         padding: 0px;
         margin: 0px;
+        min-width: 258px;
+        max-width: 257px;
     }
 
     &__width {
@@ -164,10 +166,9 @@
         justify-content: flex-start;
         align-items: center;
         flex-direction: row;
-        background-color: $bgHero;
         box-shadow: 0px 4px 10px 0px $boxshadowColor;
         position: relative;
-        padding-left: 20px;    
+        padding-left: 20px;
     }
 }
 
