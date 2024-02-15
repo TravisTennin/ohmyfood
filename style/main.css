@@ -29,6 +29,23 @@
   gap: 15px;
 }
 
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0%;
+  }
+}
+.loader {
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-radius: 50%;
+  animation: scale 1.75s infinite;
+}
+
 .main-container {
   max-width: 100%;
   text-decoration: none;
@@ -321,7 +338,9 @@
   overflow: hidden;
 }
 
+/*
 * {
-  outline: 1px red solid !important;
-  visibility: visible !important;
-}/*# sourceMappingURL=main.css.map */
+    outline: 1px red solid !important;
+    visibility: visible !important
+}
+*//*# sourceMappingURL=main.css.map */
