@@ -18,7 +18,27 @@
     height: 10px;
     border: 1px solid;
     border-radius: 50%;
-    animation: scale 1.75s infinite;
+    animation: scale 1.75s infinite, fadeIn 3.5s 1 forwards reverse;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+
+}
+
+main {
+    animation: fadeIn 6s 1 forwards;
+    opacity: 0;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 .main-container {
@@ -170,7 +190,8 @@
         @include flexStart(column, start);
         padding: 0px;
         margin: 0px;
-        min-width: 258px;
+        min-width: 168px;
+        width: 240px;
         max-width: 257px;
         position: relative;
     }
@@ -182,12 +203,13 @@
         border-radius: 20px;
         margin-bottom: 15px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         flex-direction: row;
         box-shadow: 0px 4px 10px 0px $boxshadowColor;
         position: relative;
         padding-left: 20px;
+
     }
 }
 

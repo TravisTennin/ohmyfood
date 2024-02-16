@@ -2,6 +2,7 @@
 <html lang="en">
 <!-- TODO: Add spinning loader -->
 <!-- TODO: Add .txt file contianing repo and site links -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,17 +29,15 @@
             <p>Islington, London</p>
         </div>
     </header>
-
+    
     <main>
         <section class="hero-container">
             <div class="hero-title">
                 <h2>Book the meal you want</h2>
             </div>
             <h3 class="hero-title__txt">Discover our carefully selected high-end restaurants</h3>
-
-            <div class="loader"></div>
-
             <div class="button font-txt">
+                <!-- TODO: Add :hover effects to all buttons -->
                 <p>Explore our restaurants</p>
             </div>
         </section>
@@ -76,6 +75,7 @@
                         <h3 class="card__title">Kitchen West</h3>
                         <p class="card__txt">Angel</p>
                     </div>
+                    <!-- TODO: Animate heart fill when :active-->
                     <i class="heart__container fa-xl fa-regular fa-heart"></i>
                 </div>
 
@@ -114,7 +114,6 @@
         <div class="footer__logo">
             <img src="images/logo/ohmyfood" alt="ohmyfood">
         </div>
-        <!-- TODO: Fix gap issue -->
         <div class="align-txt footer__gap">
             <i class="footer__fa fa-solid fa-utensils"></i>
             <div class="font-txt font-txt__footer">
@@ -134,6 +133,9 @@
             <p>Contact</p>
         </div>
     </footer>
+
+    <div class="loader"></div>
 </body>
+
 </html>
 <!-- TODO: Move all containers into "main-container" in scss(?) -->
