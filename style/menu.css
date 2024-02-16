@@ -29,8 +29,13 @@
   gap: 15px;
 }
 
+.hero-img {
+  position: absolute;
+  z-index: -1;
+}
+
 .menu-box {
-  height: 1080px;
+  height: 1148px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   background-color: #F6F6F6;
@@ -47,7 +52,7 @@
   font-weight: 300;
   line-height: 19px;
   text-align: left;
-  padding: 10px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   position: relative;
   margin-bottom: 30px;
   width: -moz-fit-content;
@@ -55,10 +60,10 @@
 }
 .menu-header:before {
   position: absolute;
-  height: 5px;
-  width: 50%;
+  height: 3px;
+  width: 57%;
   left: 0;
-  bottom: -5px;
+  bottom: -3px;
   display: block;
   content: "";
   background-color: #99E2D0;
@@ -98,15 +103,16 @@
   text-overflow: ellipsis;
 }
 
-.hero-img {
-  position: absolute;
-  z-index: -1;
-}
-
 .step-section__width:active .step-section__p {
   width: 160px;
 }
 .step-section__width:active .step-section__p p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.step-section__width:active .step-section__p h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -117,10 +123,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: center;
+  flex-direction: row;
 }
 .step-section__width:active .green-tick-box > .tick {
-  animation: spin 1.2s linear 1;
+  animation: spin 0.75s linear 1;
 }
 
 .banner--title {
@@ -130,12 +136,12 @@
   font-size: 28px;
   line-height: 40px;
   color: black;
+  width: 80%;
+  padding-top: 20px;
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
-  position: relative;
   justify-content: space-between;
 }
 .banner--title i {
@@ -144,7 +150,6 @@
   right: 0px;
 }
 
-/**** NEST *****/
 .banner--heart {
   display: flex;
   justify-content: flex-end;
