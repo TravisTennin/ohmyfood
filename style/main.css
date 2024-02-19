@@ -111,6 +111,10 @@ main {
   justify-content: space-evenly;
 }
 
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+}
+
 .align-txt {
   display: flex;
   justify-content: center;
@@ -131,6 +135,7 @@ main {
 }
 .font-txt__footer {
   color: white;
+  padding: 5px 0px 5px 0px;
 }
 
 .loc-txt {
@@ -175,6 +180,13 @@ main {
   color: #353535;
 }
 
+.icon__color {
+  color: #7E7E7E;
+}
+.icon__color:hover {
+  color: #9356DC;
+}
+
 .button {
   border: none;
   background-color: transparent;
@@ -190,6 +202,10 @@ main {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
   color: white;
   margin: 20px 0px 20px 0px;
+}
+
+.button:hover {
+  background: var(--Button-Gradient, linear-gradient(193deg, #b08dda -11.44%, #ffa4e6 123.93%));
 }
 
 .step-section {
@@ -318,7 +334,7 @@ main {
   margin-bottom: 3px;
 }
 
-.heart__container {
+.heart__pos {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,6 +344,35 @@ main {
   right: 20px;
 }
 
+.heart-container {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.heart-gradient {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.heart-container:hover heart-gradient {
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  display: block;
+  animation: 1s appear ease-in-out forward 1;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .badge {
   width: 80px;
   height: 29px;
