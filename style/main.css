@@ -50,10 +50,11 @@
   height: 10px;
   border: 1px solid;
   border-radius: 50%;
-  animation: scale 1.75s infinite, fadeIn 3.5s 1 forwards reverse;
+  animation: scale 1.5s infinite, fadeIn 3s 1 forwards reverse;
   position: fixed;
   top: 40%;
   left: 50%;
+  color: #7E7E7E;
 }
 
 main {
@@ -142,7 +143,6 @@ a:link, a:visited, a:hover, a:active {
 }
 .font-txt__footer {
   color: white;
-  padding: 5px 0px 5px 0px;
 }
 
 .loc-txt {
