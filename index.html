@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,7 @@
             <p>Islington, London</p>
         </div>
     </header>
-    
+
     <main>
         <section class="hero-container">
             <div class="hero-title">
@@ -47,13 +48,15 @@
                 </div>
             </div>
             <div class="step-section">
-                <span class="step-section__number">2</span><i class="fa-solid fa-list icon__color" aria-hidden="true"></i>
+                <span class="step-section__number">2</span><i class="fa-solid fa-list icon__color"
+                    aria-hidden="true"></i>
                 <div class="font-txt">
                     <p>Build your meal</p>
                 </div>
             </div>
             <div class="step-section">
-                <span class="step-section__number">3</span><i class="fa-solid fa-store icon__color" aria-hidden="true"></i>
+                <span class="step-section__number">3</span><i class="fa-solid fa-store icon__color"
+                    aria-hidden="true"></i>
                 <div class="font-txt">
                     <p>Enjoy your meal at the restaurant</p>
                 </div>
@@ -107,32 +110,43 @@
         </section>
     </main>
 
-    <!-- TODO: Find existing margin/padding/size effecting Footer () -->
-    <footer class="footer">
-        <div class="footer__logo">
-            <img src="images/logo/ohmyfood" alt="ohmyfood">
-        </div>
-        <a href="./README.md" class="align-txt footer__gap">
-            <i class="footer__fa fa-solid fa-utensils"></i>
-            <div class="font-txt font-txt__footer">
-                <p>Suggest a restaurant</p>
-            </div>
-        </a>
-        <a href="./README.md" class="align-txt footer__gap">
-            <i class="footer__fa fa-solid fa-handshake-angle"></i>
-            <div class="font-txt font-txt__footer">
-                <p>Become a partner</p>
-            </div>
-        </a>
-        <a href="./README.md" class="font-txt font-txt__footer">
-            <p>Legal notice</p>
-        </a>
-        <a href="./README.md" class="font-txt font-txt__footer">
-            <p>Contact</p>
-        </a>
+    <!-- TODO: Fix spacing between <li> in Footer -->
+    <footer>
+        <ul class="footer">
+            <li class="footer__logo">
+                <p>ohmyfood</p>
+            </li>
+            <li>
+                <a href="./README.md" class="align-txt footer__gap">
+                    <i class="footer__fa fa-solid fa-utensils"></i>
+                    <span class="font-txt font-txt__footer">
+                        <p>Suggest a restaurant</p>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./README.md" class="align-txt footer__gap">
+                    <i class="footer__fa fa-solid fa-handshake-angle"></i>
+                    <span class="font-txt font-txt__footer">
+                        <p>Become a partner</p>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./README.md" class="font-txt font-txt__footer">
+                    <p>Legal notice</p>
+                </a>
+            </li>
+            <li>
+                <a href="./README.md" class="font-txt font-txt__footer">
+                    <p>Contact</p>
+                </a>
+            </li>
+        </ul>
     </footer>
 
     <div class="loader"></div>
 </body>
+
 </html>
 <!-- TODO: Move all containers into "main-container" in scss(?) -->
