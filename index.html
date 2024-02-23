@@ -22,11 +22,11 @@
 <body class="container">
     <header class="container--header">
         <img class="header-img" src="images/logo/ohmyfood_header.svg" alt="ohmyfood">
-        <div class="txt txt__color txt--loc container--txt txt--bg txt--align"><i class="fa-solid fa-location-dot"
-                aria-hidden="true"></i>
+    </header>
+        <div class="txt container--txt txt--loc txt--align txt__color txt__bg">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
             <p>Islington, London</p>
         </div>
-    </header>
 
     <main>
         <section class="container--hero">
@@ -41,71 +41,79 @@
 
         <section class="container--body">
             <h2 class="container--heading">How it works</h2>
-            <div class="step-section">
-                <span class="step-section__number">1</span><i class="fa fa-mobile icon__color" aria-hidden="true"></i>
+            <div class="steps">
+                <span class="steps--num">1</span><i class="fa fa-mobile icon__color" aria-hidden="true"></i>
                 <div class="txt">
                     <p>Choose a restaurant</p>
                 </div>
             </div>
-            <div class="step-section">
-                <span class="step-section__number">2</span><i class="fa-solid fa-list icon__color"
+            <div class="steps">
+                <span class="steps--num">2</span><i class="fa-solid fa-list icon__color"
                     aria-hidden="true"></i>
                 <div class="txt">
                     <p>Build your meal</p>
                 </div>
             </div>
-            <div class="step-section">
-                <span class="step-section__number">3</span><i class="fa-solid fa-store icon__color"
+            <div class="steps">
+                <span class="steps--num">3</span><i class="fa-solid fa-store icon__color"
                     aria-hidden="true"></i>
                 <div class="txt">
                     <p>Enjoy your meal at the restaurant</p>
                 </div>
             </div>
         </section>
-
-        <section class="card__bgPadding">
+<!-- TODO: Fix FA icons from changing color on visited link -->
+        <section class="card__bgPad">
             <h2 class="container--heading" id="restaurants">Restaurants</h2>
             <div class="card__align">
                 <a href="./kitchenwest.html" class="card">
                     <img src="images/restaurants/Kitchen_West.jpg" alt="Kitchen West">
                     <span class="badge badge__bg">New</span>
-                    <div class="card__container">
-                        <h3 class="card__title">Kitchen West</h3>
+                    <div class="card--container">
+                        <h3 class="card--title">Kitchen West</h3>
                         <p class="txt--card">Angel</p>
                     </div>
-<!-- TODO: Fix FA icons from changing color on visited link -->
                     <div class="heart-container">
                         <i class="heart__pos fa-xl fa-regular fa-heart"></i>
-                        <i class="heart__pos heart-gradient fa-xl fa-solid fa-heart"></i>
+                        <i class="heart__pos heart__grad fa-xl fa-solid fa-heart"></i>
                     </div>
                 </a>
 
                 <a href="./elderflower.html" class="card">
-                    <img src="images/restaurants/Elderflower.jpg" alt="Kitchen West">
+                    <img src="images/restaurants/Elderflower.jpg" alt="Elderflower">
                     <span class="badge badge__bg">New</span>
-                    <div class="card__container">
-                        <h3 class="card__title">Elderflower</h3>
+                    <div class="card--container">
+                        <h3 class="card--title">Elderflower</h3>
                         <p class="txt--card">Old Street</p>
                     </div>
-                    <i class="heart__pos fa-xl fa-regular fa-heart"></i>
+                    <div class="heart-container">
+                        <i class="heart__pos fa-xl fa-regular fa-heart"></i>
+                        <i class="heart__pos heart__grad fa-xl fa-solid fa-heart"></i>
+                    </div>
                 </a>
 
                 <a href="./shoreditchcanteen.html" class="card">
-                    <img src="images/restaurants/Shoreditch_Canteen.jpg" alt="Kitchen West">
-                    <div class="card__container">
-                        <h3 class="card__title">Shoreditch Canteen</h3>
+                    <img src="images/restaurants/Shoreditch_Canteen.jpg" alt="Shoreditch Canteen">
+                    <div class="card--container">
+                        <h3 class="card--title">Shoreditch Canteen</h3>
                         <p class="txt--card">Shoreditch</p>
                     </div>
-                    <i class="heart__pos fa-xl fa-regular fa-heart"></i>
+                    <div class="heart-container">
+                        <i class="heart__pos fa-xl fa-regular fa-heart"></i>
+                        <i class="heart__pos heart__grad fa-xl fa-solid fa-heart"></i>
+                    </div>
                 </a>
 
                 <a href="./thebayleaf.html" class="card">
-                    <img src="images/restaurants/The_Bay_Leaf.jpg" alt="Kitchen West">
-                    <div class="card__container">
-                        <h3 class="card__title">The Bay Leaf</h3>
+                    <img src="images/restaurants/The_Bay_Leaf.jpg" alt="The Bay Leaf">
+                    <div class="card--container">
+                        <h3 class="card--title">The Bay Leaf</h3>
                         <p class="txt--card">Hoxton</p>
                     </div>
-                    <i class="heart__pos fa-xl fa-regular fa-heart"></i>
+                    <div class="heart-container">
+                        <i class="heart__pos fa-xl fa-regular fa-heart"></i>
+                        <i class="heart__pos heart__grad fa-xl fa-solid fa-heart"></i>
+                    </div>
                 </a>
             </div>
         </section>

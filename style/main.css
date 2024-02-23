@@ -1,4 +1,65 @@
-/**Create new "flex" mixin without "align-items: center" (what to name it?)**/
+/*** FLEX ***/
+/*** PADDING ***/
+/*** FONT STYLE ***/
+/*** IMAGE WIDTH ***/
+/*** BUTTON ***/
+.btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 218px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 25px;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  color: white;
+  margin: 20px 0px 20px 0px;
+}
+
+.btn:hover {
+  background: var(--Button-Gradient, linear-gradient(193deg, #b08dda -11.44%, #ffa4e6 123.93%));
+}
+
+/*** HEART ***/
+.heart__pos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 19px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.heart__grad {
+  background: -webkit-linear-gradient(45deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.heart-container:hover > .heart__grad,
+.heart-container:active > .heart__grad {
+  animation: 0.5s appear ease-in-out forwards 1;
+  opacity: 1;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*** FOOTER **/
 footer {
   background: #353535;
   padding-left: 40px;
@@ -39,6 +100,11 @@ footer {
 
 .footer__gap {
   gap: 15px;
+}
+
+/*** FONT AWESOME ***/
+.fa-xl {
+  font-size: 2em;
 }
 
 /*** LOADER ***/
@@ -82,10 +148,7 @@ main {
   }
 }
 /*** ANCHOR ***/
-a:link,
-a:visited,
-a:hover,
-a:active {
+a:link, a:visited, a:hover, a:active {
   text-decoration: none !important;
 }
 
@@ -117,14 +180,9 @@ a:active {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .container--heading {
-  color: #000;
-  font-family: Roboto;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
   display: flex;
   flex: auto;
   margin-left: 20px;
@@ -189,6 +247,7 @@ a:active {
   background-color: #EAEAEA;
 }
 
+/*** HEADER ***/
 .header-img {
   width: 162px;
   height: 63px;
@@ -199,15 +258,17 @@ a:active {
   flex-direction: row;
 }
 
+/*** HERO ***/
 .hero-title {
   color: #000;
   font-family: Roboto;
-  font-size: 24px;
+  font-size: 21px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
+/*** ICONS **/
 .icon__color {
   color: #7E7E7E;
 }
@@ -215,31 +276,8 @@ a:active {
   color: #9356DC;
 }
 
-/**
-/*** BUTTON ***/
-.btn {
-  border: none;
-  background-color: transparent;
-  outline: none;
-  width: 218px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  border-radius: 25px;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
-  color: white;
-  margin: 20px 0px 20px 0px;
-}
-
-.btn:hover {
-  background: var(--Button-Gradient, linear-gradient(193deg, #b08dda -11.44%, #ffa4e6 123.93%));
-}
-
 /*** STEP SECTION ***/
-.step-section {
+.steps {
   width: 323px;
   height: 69px;
   gap: 20px;
@@ -254,7 +292,7 @@ a:active {
   position: relative;
   padding-left: 20px;
 }
-.step-section__number {
+.steps--num {
   color: var(--White, #FFF);
   font-family: Roboto;
   font-size: 14px;
@@ -272,10 +310,10 @@ a:active {
   position: absolute;
   left: -10px;
 }
-.step-section__menu {
+.steps--menu {
   background-color: white;
 }
-.step-section__p {
+.steps--p {
   display: flex;
   justify-content: flex-start;
   align-items: start;
@@ -287,7 +325,7 @@ a:active {
   max-width: 257px;
   position: relative;
 }
-.step-section__width {
+.steps__width {
   width: 349px;
   height: 70px;
   gap: 20px;
@@ -315,13 +353,13 @@ a:active {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   position: relative;
 }
-.card__container {
+.card--container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 10px;
 }
-.card__title {
+.card--title {
   color: #000;
   font-family: Roboto;
   font-size: 18px;
@@ -330,6 +368,18 @@ a:active {
   line-height: normal;
   display: flex;
   justify-content: space-between;
+}
+.card__align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 50px;
+}
+.card__bgPad {
+  background-color: #F6F6F6;
+  padding: 15px 0px 15px 0px;
 }
 .card img {
   width: 100%;
@@ -344,54 +394,7 @@ a:active {
   width: 100%;
   margin: 0;
 }
-.card__align {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 18px;
-  padding-bottom: 50px;
-}
-.card__bgPadding {
-  background-color: #F6F6F6;
-  padding: 15px 0px 15px 0px;
-}
 
-/*** HEART ICON ***/
-.heart__pos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  bottom: 32px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-}
-
-.heart-gradient {
-  background: -webkit-linear-gradient(45deg, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-}
-
-.heart-container:hover > .heart-gradient,
-.heart-container:active > .heart-gradient {
-  animation: 1s appear ease-in-out forwards 1;
-  opacity: 1;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 /*** BADGE ***/
 .badge {
   width: 80px;
@@ -416,6 +419,7 @@ a:active {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
+/*** OVERFLOW ***/
 .overflow {
   overflow: hidden;
 }

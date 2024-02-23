@@ -48,10 +48,7 @@ main {
 }
 
 /*** ANCHOR ***/
-a:link,
-a:visited,
-a:hover,
-a:active {
+a:link, a:visited, a:hover, a:active {
     text-decoration: none !important;
 }
 
@@ -73,7 +70,7 @@ a:active {
     }
 
     &--body {
-        background-color: $bgSection;
+        background-color: white;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -82,10 +79,10 @@ a:active {
 
     &--header {
         @include flexCenter(column);
+        box-shadow: 0px 2px 4px 0px #00000026;
     }
 
     &--heading {
-        @include header-2;
         display: flex;
         flex: auto;
         margin-left: 20px;
@@ -154,6 +151,7 @@ a:active {
     }
 }
 
+/*** HEADER ***/
 .header-img {
     width: 162px;
     height: 63px;
@@ -161,10 +159,17 @@ a:active {
     @include flexCenter();
 }
 
+/*** HERO ***/
 .hero-title {
-    @include header-2;
+    color: #000;
+    font-family: Roboto;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
+/*** ICONS **/
 .icon__color {
     color: $iconColor;
 
@@ -173,28 +178,8 @@ a:active {
     }
 }
 
-/**
-/*** BUTTON ***/
-.btn {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    width: 218px;
-    height: 50px;
-    @include flexCenter(row);
-    border-radius: 25px;
-    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-    box-shadow: 0px 4px 10px 0px $boxshadowColor;
-    color: $bgSection;
-    margin: 20px 0px 20px 0px;
-}
-
-.btn:hover {
-    background: var(--Button-Gradient, linear-gradient(193deg, #b08dda -11.44%, #ffa4e6 123.93%));
-}
-
 /*** STEP SECTION ***/
-.step-section {
+.steps {
     width: 323px;
     height: 69px;
     gap: 20px;
@@ -209,7 +194,7 @@ a:active {
     position: relative;
     padding-left: 20px;
 
-    &__number {
+    &--num {
         color: var(--White, #FFF);
         @include robotoS14;
         border-radius: 50%;
@@ -217,17 +202,16 @@ a:active {
         width: 20px;
         background-color: $primaryColor;
         @include flexCenter();
-
         position: absolute;
         left: -10px;
     }
 
 
-    &__menu {
-        background-color: $bgSection;
+    &--menu {
+        background-color: white;
     }
 
-    &__p {
+    &--p {
         @include flexStart(column, start);
         padding: 0px;
         margin: 0px;
@@ -267,14 +251,14 @@ a:active {
     box-shadow: 0px 4px 15px 0px $boxshadowColor;
     position: relative;
 
-    &__container {
+    &--container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         margin-left: 10px;
     }
 
-    &__title {
+    &--title {
         color: #000;
         font-family: Roboto;
         font-size: 18px;
@@ -283,6 +267,17 @@ a:active {
         line-height: normal;
         display: flex;
         justify-content: space-between;
+    }
+
+    &__align {
+        @include flexCenter(column);
+        gap: 18px;
+        padding-bottom: 50px;
+    }
+
+    &__bgPad {
+        background-color: $bgHero;
+        padding: 15px 0px 15px 0px;
     }
 
     & img {
@@ -299,56 +294,6 @@ a:active {
     & p {
         width: 100%;
         margin: 0;
-    }
-
-    &__align {
-        @include flexCenter(column);
-        gap: 18px;
-        padding-bottom: 50px;
-    }
-
-    &__bgPadding {
-        background-color: #F6F6F6;
-        padding: 15px 0px 15px 0px;
-    }
-}
-
-/*** HEART ICON ***/
-.heart__pos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    bottom: 32px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-}
-
-.heart-container {}
-
-.heart-gradient {
-    background: -webkit-linear-gradient(45deg, #9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-}
-
-.heart-container:hover>.heart-gradient,
-.heart-container:active>.heart-gradient {
-    animation: 1s appear ease-in-out forwards 1;
-    opacity: 1;
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
     }
 }
 
@@ -373,6 +318,7 @@ a:active {
     }
 }
 
+/*** OVERFLOW ***/
 .overflow {
     overflow: hidden;
 }
