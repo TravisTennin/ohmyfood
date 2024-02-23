@@ -1,7 +1,11 @@
 /**Create new "flex" mixin without "align-items: center" (what to name it?)**/
-.footer {
-  padding: 25px;
+footer {
   background: #353535;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,11 +13,12 @@
   align-items: flex-start;
   margin: 0px;
   list-style: none;
-  width: 100%;
+  width: 80%;
   height: 100%;
   max-width: 424px;
   max-height: 203px;
   gap: 10px;
+  padding: 0px;
 }
 
 .footer__logo {
@@ -36,6 +41,7 @@
   gap: 15px;
 }
 
+/*** LOADER ***/
 @keyframes scale {
   0% {
     transform: scale(0);
@@ -45,6 +51,11 @@
     opacity: 0%;
   }
 }
+body {
+  height: calc(100% - 8px);
+  margin: 8px 8px 0px 8px;
+}
+
 .loader {
   width: 10px;
   height: 10px;
@@ -70,33 +81,44 @@ main {
     opacity: 100%;
   }
 }
-.main-container {
+/*** ANCHOR ***/
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none !important;
+}
+
+/*** CONTAINERS ***/
+.container {
   max-width: 100%;
   text-decoration: none;
   margin: 0px;
 }
-
-.header-container {
+.container--hero {
+  width: 100%;
+  height: 277px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
-.header-container__menu {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: row;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: #F6F6F6;
 }
-
-.body-container {
+.container--body {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0px 40px 0px;
 }
-.body-container__heading {
+.container--header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container--heading {
   color: #000;
   font-family: Roboto;
   font-size: 24px;
@@ -108,55 +130,62 @@ main {
   margin-left: 20px;
   padding-bottom: 15px;
 }
-
-.hero-container {
-  width: 100%;
-  height: 277px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  background-color: #F6F6F6;
-  justify-content: space-evenly;
-}
-
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none !important;
-}
-
-.align-txt {
+.container--menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
+.container--txt {
+  width: 100%;
+  height: 50px;
+}
 
-.font-txt {
+/*** TEXT ***/
+.txt {
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-.font-txt__color {
+.txt--align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.txt--hero {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
   color: #353535;
 }
-.font-txt__footer {
-  color: white;
-}
-
-.loc-txt {
+.txt--loc {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 17px;
 }
-.loc-txt__container {
-  width: 100%;
-  height: 50px;
+.txt--card {
+  color: #000;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 10px;
 }
-.loc-txt__bg {
+.txt--footer {
+  color: white;
+}
+.txt__color {
+  color: #353535;
+}
+.txt__bg {
   background-color: #EAEAEA;
 }
 
@@ -178,14 +207,6 @@ a:link, a:visited, a:hover, a:active {
   font-weight: 700;
   line-height: normal;
 }
-.hero-title__txt {
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  color: #353535;
-}
 
 .icon__color {
   color: #7E7E7E;
@@ -194,7 +215,9 @@ a:link, a:visited, a:hover, a:active {
   color: #9356DC;
 }
 
-.button {
+/**
+/*** BUTTON ***/
+.btn {
   border: none;
   background-color: transparent;
   outline: none;
@@ -211,10 +234,11 @@ a:link, a:visited, a:hover, a:active {
   margin: 20px 0px 20px 0px;
 }
 
-.button:hover {
+.btn:hover {
   background: var(--Button-Gradient, linear-gradient(193deg, #b08dda -11.44%, #ffa4e6 123.93%));
 }
 
+/*** STEP SECTION ***/
 .step-section {
   width: 323px;
   height: 69px;
@@ -278,6 +302,7 @@ a:link, a:visited, a:hover, a:active {
   padding-left: 20px;
 }
 
+/*** CARDS ***/
 .card {
   display: flex;
   justify-content: center;
@@ -289,18 +314,6 @@ a:link, a:visited, a:hover, a:active {
   overflow: hidden;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   position: relative;
-}
-.card__bgPadding {
-  background-color: #F6F6F6;
-  padding: 15px 0px 15px 0px;
-}
-.card__align {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 18px;
-  padding-bottom: 50px;
 }
 .card__container {
   display: flex;
@@ -318,29 +331,33 @@ a:link, a:visited, a:hover, a:active {
   display: flex;
   justify-content: space-between;
 }
-.card__txt {
-  color: #000;
-  font-family: Roboto;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  padding-bottom: 10px;
-}
 .card img {
   width: 100%;
   height: 100%;
-}
-.card p {
-  width: 100%;
-  margin: 0;
 }
 .card h3 {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 3px;
 }
+.card p {
+  width: 100%;
+  margin: 0;
+}
+.card__align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 50px;
+}
+.card__bgPadding {
+  background-color: #F6F6F6;
+  padding: 15px 0px 15px 0px;
+}
 
+/*** HEART ICON ***/
 .heart__pos {
   display: flex;
   align-items: center;
@@ -349,27 +366,22 @@ a:link, a:visited, a:hover, a:active {
   position: absolute;
   bottom: 32px;
   right: 20px;
-}
-
-.heart-container {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 30px;
+  height: 30px;
 }
 
 .heart-gradient {
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: -webkit-linear-gradient(45deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
-  z-index: -1;
 }
 
-.heart-container:hover heart-gradient {
-  background: linear-gradient(45deg, #9356DC, #FF79DA);
-  -webkit-text-fill-color: transparent;
-  display: block;
-  animation: 1s appear ease-in-out forward 1;
+.heart-container:hover > .heart-gradient,
+.heart-container:active > .heart-gradient {
+  animation: 1s appear ease-in-out forwards 1;
+  opacity: 1;
 }
 
 @keyframes appear {
@@ -380,6 +392,7 @@ a:link, a:visited, a:hover, a:active {
     opacity: 1;
   }
 }
+/*** BADGE ***/
 .badge {
   width: 80px;
   height: 29px;

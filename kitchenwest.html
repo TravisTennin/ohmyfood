@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +21,8 @@
     <link rel="stylesheet" href="./style/normalize.css">
 </head>
 
-<body class="main-container">
-    <header class="header-container__menu">
+<body class="container">
+    <header class="container--menu">
         <a href="./index.html"><i class="fa-xl fa-solid fa-arrow-left"></i></a>
         <img class="header-img" src="images/logo/ohmyfood_header.svg" alt="ohmyfood">
     </header>
@@ -33,8 +34,11 @@
     <section class="menu-box">
         <h2 class="banner--title">
             Kitchen West
-            <i class="banner--heart fa-regular fa-heart"></i>
         </h2>
+        <div class="heart-container">
+            <i class="banner--heart heart__pos fa-xl fa-regular fa-heart"></i>
+            <i class="banner--heart heart__pos heart-gradient fa-xl fa-solid fa-heart"></i>
+        </div>
         <section>
             <h4 class="menu-header menu-header:after">Starters</h4>
             <div class="step-section__width step-section__menu overflow">
@@ -45,7 +49,7 @@
                 <div>
                     <p class="menu--li__price">£25</p>
                 </div>
-<!-- TODO: Change icon color to white -->
+                <!-- TODO: Change icon color to white -->
                 <span class="green-tick-box">
                     <i class="tick tick__color fa-regular fa-xl fa-circle-check"></i>
                 </span>
@@ -162,40 +166,45 @@
             </div>
         </section>
 
-        <a href="./README.md" class="button font-txt">
+        <a href="./README.md" class="btn txt">
             <p>Order</p>
         </a>
     </section>
-<!-- TODO: Adjust width values to get rid of excess space -->
+
     <footer>
         <ul class="footer">
             <li class="footer__logo">
                 <p>ohmyfood</p>
             </li>
             <li>
-                <a href="./README.md" class="align-txt footer__gap">
+                <a href="./README.md" class="txt--align footer__gap">
                     <i class="footer__fa fa-solid fa-utensils"></i>
-                    <span class="font-txt font-txt__footer"><p>Suggest a restaurant</p></span>
+                    <span class="txt txt--footer">
+                        <p>Suggest a restaurant</p>
+                    </span>
                 </a>
             </li>
             <li>
-                <a href="./README.md" class="align-txt footer__gap">
+                <a href="./README.md" class="txt--align footer__gap">
                     <i class="footer__fa fa-solid fa-handshake-angle"></i>
-                    <span class="font-txt font-txt__footer"><p>Become a partner</p></span>
+                    <span class="txt txt--footer">
+                        <p>Become a partner</p>
+                    </span>
                 </a>
             </li>
             <li>
-                <a href="./README.md" class="font-txt font-txt__footer">
+                <a href="./README.md" class="txt txt--footer">
                     <p>Legal notice</p>
                 </a>
             </li>
             <li>
-                <a href="./README.md" class="font-txt font-txt__footer">
+                <a href="./README.md" class="txt txt--footer">
                     <p>Contact</p>
                 </a>
             </li>
         </ul>
     </footer>
 </body>
+
 </html>
 <!-- TODO: Add Media Query for other devices -->
