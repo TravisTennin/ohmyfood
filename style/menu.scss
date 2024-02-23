@@ -2,12 +2,40 @@
 @import 'mixins';
 @import 'components';
 
-.hero-img {
-    position: absolute;
-    z-index: -1;
+// BANNER //
+.banner {
+    font-family: Shrikhand;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    color: black;
+    width: 80%;
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+
+    &--img {
+        position: absolute;
+        z-index: -1;
+    }
+
+    &--heart {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 26px;
+        right: 20px;
+    }
 }
 
-.menu-box {
+// MENU //
+.menu {
+    
+    &--container {
     height: 1148px;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
@@ -18,31 +46,83 @@
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-}
+    }
 
-.menu-header {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 19px;
-    text-align: left;
-    padding: 20px 0px 0px 0px;
-    position: relative;
-    margin-bottom: 30px;
-    width: fit-content;
+    &--header {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        text-align: left;
+        padding: 20px 0px 0px 0px;
+        position: relative;
+        margin-bottom: 30px;
+        width: fit-content;
+    
+        &:before {
+            position: absolute;
+            height: 3px;
+            width: 57%;
+            left: 0;
+            bottom: -3px;
+            display: block;
+            content: "";
+            background-color: #99E2D0;
+        }
+    }
 
-    &:before {
-        position: absolute;
-        height: 3px;
-        width: 57%;
-        left: 0;
-        bottom: -3px;
-        display: block;
-        content: "";
-        background-color: #99E2D0;
+    &--li {
+        font-family: Roboto;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 18px;
+        color: black;
+    
+        &__title {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+        }
+    
+        &__descr {
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 17px;
+        }
+    
+        &__price {
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 17px;
+            color: $bgColor;
+            position: absolute;
+            transform: translateX(100%);
+        }
     }
 }
 
+// HEART //
+.heart-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+
+    & i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 32px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// TICK BOX ANIMATION //
 .tick-box {
     height: 100%;
     width: 71px;
@@ -93,6 +173,7 @@
     }
 }
 
+// ELLIPSIS //
 .steps--p p {
     white-space: nowrap;
     overflow: hidden;
@@ -127,78 +208,5 @@
         -webkit-animation: spin 0.75s linear 1;
         -moz-animation: spin 0.75s linear 1;
         animation: spin 0.75s linear 1
-    }
-}
-
-.heart-container {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    z-index: 1;
-
-    & i {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        width: 32px;
-        height: 30px;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-.banner {
-    font-family: Shrikhand;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 40px;
-    color: black;
-    width: 80%;
-    padding-top: 20px;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: space-between;
-
-    &--heart {
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        top: 26px;
-        right: 20px;
-    }
-}
-
-.menu--li {
-    font-family: Roboto;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 18px;
-    color: black;
-
-    &__title {
-        font-family: Roboto;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 21px;
-    }
-
-    &__descr {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 17px;
-    }
-
-    &__price {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 17px;
-        color: $bgColor;
-        position: absolute;
-        transform: translateX(100%);
     }
 }
