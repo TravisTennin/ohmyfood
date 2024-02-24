@@ -1,4 +1,4 @@
-/*** BUTTON ***/
+// BUTTON //
 .btn {
     border: none;
     background-color: transparent;
@@ -11,15 +11,22 @@
     box-shadow: 0px 4px 10px 0px $boxshadowColor;
     color: white;
     margin: 20px 0px 20px 0px;
+    min-height: 40px;
 }
 
 .btn:hover {
     background: var(--Button-Gradient, linear-gradient(193deg, #b08dda -11.44%, #ffa4e6 123.93%));
 }
 
-/*** HEART ***/
+// ARROW //
+.arrow__pos {
+    position: absolute;
+    left: 10px;
+}
+
+// HEART //
 .heart {
-    
+
     &__pos {
         display: flex;
         align-items: center;
@@ -33,12 +40,16 @@
     }
 }
 
+.fa-heart {
+    color: black !important;
+}
+
 .heart__grad {
-        background: -webkit-linear-gradient(45deg, #9356DC, #FF79DA);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0;
+    background: -webkit-linear-gradient(45deg, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
 }
 
 .heart-container:hover>.heart__grad,
@@ -57,7 +68,7 @@
     }
 }
 
-/*** FOOTER **/
+// FOOTER //
 footer {
     background: #353535;
     padding-left: 40px;
@@ -65,7 +76,6 @@ footer {
 }
 
 .footer {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +111,7 @@ footer {
     gap: 15px;
 }
 
-/*** FONT AWESOME ***/
+// FONT AWESOME //
 .fa-xl {
     font-size: 2em;
 }

@@ -1,31 +1,39 @@
-/*** FLEX ***/
+// FLEX //
 @mixin flexCenter($direction: row) {
     display: flex;
+    flex-direction: $direction;
     justify-content: center;
     align-items: center;
-    flex-direction: $direction;
 }
 
 @mixin flexStart($direction: row, $align: center) {
     display: flex;
+    flex-direction: $direction;
     justify-content: flex-start;
     align-items: $align;
-    flex-direction: $direction;
 }
 
 @mixin flexEnd($direction: row) {
     display: flex;
+    flex-direction: $direction;
     justify-content: flex-end;
     align-items: center;
-    flex-direction: $direction;
 }
 
-/*** PADDING ***/
+@mixin flexWrap($direction: row) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+// PADDING //
 @mixin padding() {
     padding: 15px;
 }
 
-/*** FONT STYLE ***/
+// FONT STYLE //
 @mixin robotoS14 {
     font-family: Roboto;
     font-size: 14px;
@@ -34,7 +42,16 @@
     line-height: normal;
 }
 
-/*** IMAGE WIDTH ***/
+@mixin hero-title {
+    color: #000;
+    font-family: Roboto;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+// IMAGE WIDTH //
 @mixin imgWidth {
     width: 100%
 }

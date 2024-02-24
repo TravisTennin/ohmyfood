@@ -1,8 +1,3 @@
-/*** FLEX ***/
-/*** PADDING ***/
-/*** FONT STYLE ***/
-/*** IMAGE WIDTH ***/
-/*** BUTTON ***/
 .btn {
   border: none;
   background-color: transparent;
@@ -10,21 +5,26 @@
   width: 218px;
   height: 50px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   border-radius: 25px;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
   color: white;
   margin: 20px 0px 20px 0px;
+  min-height: 40px;
 }
 
 .btn:hover {
   background: var(--Button-Gradient, linear-gradient(193deg, #b08dda -11.44%, #ffa4e6 123.93%));
 }
 
-/*** HEART ***/
+.arrow__pos {
+  position: absolute;
+  left: 10px;
+}
+
 .heart__pos {
   display: flex;
   align-items: center;
@@ -35,6 +35,10 @@
   right: 20px;
   width: 30px;
   height: 30px;
+}
+
+.fa-heart {
+  color: black !important;
 }
 
 .heart__grad {
@@ -59,7 +63,6 @@
     opacity: 1;
   }
 }
-/*** FOOTER **/
 footer {
   background: #353535;
   padding-left: 40px;
@@ -102,7 +105,6 @@ footer {
   gap: 15px;
 }
 
-/*** FONT AWESOME ***/
 .fa-xl {
   font-size: 2em;
 }
@@ -126,6 +128,10 @@ footer {
   position: absolute;
   z-index: -1;
 }
+.banner--img__flex {
+  display: flex;
+  align-items: center;
+}
 .banner--heart {
   display: flex;
   justify-content: flex-end;
@@ -135,7 +141,6 @@ footer {
 }
 
 .menu--container {
-  height: 1148px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   background-color: #F6F6F6;
@@ -205,7 +210,7 @@ footer {
 }
 .heart-container i {
   position: absolute;
-  top: 25px;
+  top: 15px;
   right: 25px;
   width: 32px;
   height: 30px;
@@ -215,7 +220,7 @@ footer {
 
 .tick-box {
   height: 100%;
-  width: 71px;
+  width: 50px;
   background-color: #99E2D0;
   transform: translateX(100%);
 }
@@ -268,10 +273,65 @@ footer {
 .steps__width:active .tick-box {
   animation: 1s slideToOrigin forwards 1, 1s spin infinite;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 .steps__width:active .tick-box > .tick {
   animation: spin 0.75s linear 1;
+}
+
+@media only screen and (min-width: 800px) {
+  .menu--container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  .txt--footer {
+    min-width: 130px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    min-width: 100%;
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+  .footer__logo {
+    order: 1;
+    margin: 0px;
+    margin-left: 20px;
+  }
+  .steps--menu {
+    max-width: 400px;
+  }
+  body {
+    padding: 0px;
+  }
+  .banner--img {
+    overflow: hidden;
+    max-height: 300px;
+  }
+  .header-img {
+    padding: 0px;
+  }
+  .container--menu {
+    position: relative;
+  }
+  .container--menu a {
+    position: absolute;
+    left: 10px;
+    color: #353535;
+  }
+  .container--menu a i {
+    font-size: 1em !important;
+  }
 }/*# sourceMappingURL=menu.css.map */

@@ -23,24 +23,23 @@
     <header class="container--header">
         <img class="header-img" src="images/logo/ohmyfood_header.svg" alt="ohmyfood">
     </header>
-        <div class="txt container--txt txt--loc txt--align txt__color txt__bg">
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <p>Islington, London</p>
+    <div class="txt container--txt txt--loc txt--align txt__color txt__bg">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <p>Islington, London</p>
+    </div>
+    <section class="container--hero">
+        <div class="hero-title">
+            <h2>Book the meal you want</h2>
         </div>
-
+        <h3 class="txt--hero">Discover our carefully selected high-end restaurants</h3>
+        <a href="#restaurants" class="btn txt">
+            <p>Explore our restaurants</p>
+        </a>
+    </section>
     <main>
-        <section class="container--hero">
-            <div class="hero-title">
-                <h2>Book the meal you want</h2>
-            </div>
-            <h3 class="txt--hero">Discover our carefully selected high-end restaurants</h3>
-            <a href="#restaurants" class="btn txt">
-                <p>Explore our restaurants</p>
-            </a>
-        </section>
 
         <section class="container--body">
-            <h2 class="container--heading hero-title">How it works</h2>
+            <h2 class="container--heading hero-title__margin">How it works</h2>
             <div class="steps">
                 <span class="steps--num">1</span><i class="fa fa-mobile icon__color" aria-hidden="true"></i>
                 <div class="txt">
@@ -48,24 +47,21 @@
                 </div>
             </div>
             <div class="steps">
-                <span class="steps--num">2</span><i class="fa-solid fa-list icon__color"
-                    aria-hidden="true"></i>
+                <span class="steps--num">2</span><i class="fa-solid fa-list icon__color" aria-hidden="true"></i>
                 <div class="txt">
                     <p>Build your meal</p>
                 </div>
             </div>
             <div class="steps">
-                <span class="steps--num">3</span><i class="fa-solid fa-store icon__color"
-                    aria-hidden="true"></i>
+                <span class="steps--num">3</span><i class="fa-solid fa-store icon__color" aria-hidden="true"></i>
                 <div class="txt">
                     <p>Enjoy your meal at the restaurant</p>
                 </div>
             </div>
         </section>
 
-<!-- TODO: Fix FA icons from changing color on visited link -->
         <section class="card__bgPad">
-            <h2 class="container--heading hero-title" id="restaurants">Restaurants</h2>
+            <h2 class="container--heading hero-title__margin" id="restaurants">Restaurants</h2>
             <div class="card__align">
                 <a href="./kitchenwest.html" class="card">
                     <img src="images/restaurants/Kitchen_West.jpg" alt="Kitchen West">
@@ -120,7 +116,6 @@
         </section>
     </main>
 
-<!-- TODO: Fix spacing in footer -->
     <footer>
         <ul class="footer">
             <li class="footer__logo">
@@ -129,17 +124,17 @@
             <li>
                 <a href="./README.md" class="txt--align footer__gap">
                     <i class="footer__fa fa-solid fa-utensils"></i>
-                    <span class="txt txt--footer">
+                    <div class="txt txt--footer">
                         <p>Suggest a restaurant</p>
-                    </span>
+                    </div>
                 </a>
             </li>
             <li>
                 <a href="./README.md" class="txt--align footer__gap">
                     <i class="footer__fa fa-solid fa-handshake-angle"></i>
-                    <span class="txt txt--footer">
+                    <div class="txt txt--footer">
                         <p>Become a partner</p>
-                    </span>
+                    </div>
                 </a>
             </li>
             <li>

@@ -21,6 +21,11 @@
     &--img {
         position: absolute;
         z-index: -1;
+
+        &__flex {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &--heart {
@@ -34,18 +39,17 @@
 
 // MENU //
 .menu {
-    
+
     &--container {
-    height: 1148px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    background-color: #F6F6F6;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        background-color: #F6F6F6;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
     }
 
     &--header {
@@ -58,7 +62,7 @@
         position: relative;
         margin-bottom: 30px;
         width: fit-content;
-    
+
         &:before {
             position: absolute;
             height: 3px;
@@ -77,21 +81,21 @@
         font-size: 16px;
         line-height: 18px;
         color: black;
-    
+
         &__title {
             font-family: Roboto;
             font-size: 18px;
             font-weight: 500;
             line-height: 21px;
         }
-    
+
         &__descr {
             font-family: Roboto;
             font-size: 15px;
             font-weight: 300;
             line-height: 17px;
         }
-    
+
         &__price {
             font-family: Roboto;
             font-size: 15px;
@@ -113,7 +117,7 @@
 
     & i {
         position: absolute;
-        top: 25px;
+        top: 15px;
         right: 25px;
         width: 32px;
         height: 30px;
@@ -125,7 +129,7 @@
 // TICK BOX ANIMATION //
 .tick-box {
     height: 100%;
-    width: 71px;
+    width: 50px;
     background-color: #99E2D0;
     transform: translateX(100%);
 
@@ -208,5 +212,72 @@
         -webkit-animation: spin 0.75s linear 1;
         -moz-animation: spin 0.75s linear 1;
         animation: spin 0.75s linear 1
+    }
+}
+
+@media only screen and (min-width:800px) {
+    .menu--container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .txt--footer {
+        min-width: 130px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        min-width: 100%;
+        padding: 10px;
+        padding-bottom: 40px;
+    }
+
+    .footer__logo {
+        order: 1;
+        margin: 0px;
+        margin-left: 20px;
+    }
+
+    .steps--menu {
+        max-width: 400px;
+
+    }
+
+    body {
+        padding: 0px;
+    }
+
+    .banner--img {
+        overflow: hidden;
+        max-height: 300px;
+    }
+
+    .header-img {
+        padding: 0px;
+    }
+
+    .container--menu {
+        position: relative;
+
+        a {
+            position: absolute;
+            left: 10px;
+            color: #353535;
+
+            i {
+                font-size: 1em !important;
+            }
+        }
     }
 }

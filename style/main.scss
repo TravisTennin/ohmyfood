@@ -2,7 +2,27 @@
 @import 'mixins';
 @import 'components';
 
-/*** LOADER ***/
+// GENERAL //
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+body {
+    margin: 8px 8px 0px 8px;
+}
+
+// LOADER //
 @keyframes scale {
     0% {
         transform: scale(0);
@@ -12,11 +32,6 @@
         transform: scale(10);
         opacity: 0%;
     }
-}
-
-body {
-    height: calc(100% - 8px);
-    margin: 8px 8px 0px 8px;
 }
 
 .loader {
@@ -34,7 +49,6 @@ body {
 main {
     animation: fadeIn 6s 1 forwards;
     opacity: 0;
-
 }
 
 @keyframes fadeIn {
@@ -47,12 +61,15 @@ main {
     }
 }
 
-/*** ANCHOR ***/
-a:link, a:visited, a:hover, a:active {
+// ANCHOR //
+a:link,
+a:visited,
+a:hover,
+a:active {
     text-decoration: none !important;
 }
 
-/*** CONTAINERS ***/
+// CONTAINERS //
 .container {
     max-width: 100%;
     text-decoration: none;
@@ -79,7 +96,7 @@ a:link, a:visited, a:hover, a:active {
 
     &--header {
         @include flexCenter(column);
-        box-shadow: 0px 2px 4px 0px #00000026;
+        box-shadow: 0px 0px 4px 0px #00000026;
     }
 
     &--heading {
@@ -99,7 +116,7 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-/*** TEXT ***/
+// TEXT //
 .txt {
     font-family: Roboto;
     font-size: 16px;
@@ -151,25 +168,24 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-/*** HEADER ***/
+// HEADER //
 .header-img {
     width: 162px;
     height: 63px;
-    padding: 13px 89px 13px 89px;
     @include flexCenter();
 }
 
-/*** HERO ***/
+// HERO //
 .hero-title {
-    color: #000;
-    font-family: Roboto;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include hero-title;
+
+    &__margin {
+        @include hero-title;
+        padding-left: 20px;
+    }
 }
 
-/*** ICONS **/
+// ICONS //
 .icon__color {
     color: $iconColor;
 
@@ -178,7 +194,7 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-/*** STEP SECTION ***/
+// STEP SECTION //
 .steps {
     width: 323px;
     height: 69px;
@@ -206,7 +222,6 @@ a:link, a:visited, a:hover, a:active {
         left: -10px;
     }
 
-
     &--menu {
         background-color: white;
     }
@@ -222,7 +237,7 @@ a:link, a:visited, a:hover, a:active {
     }
 
     &__width {
-        width: 349px;
+        width: 350px;
         height: 70px;
         gap: 20px;
         border-radius: 20px;
@@ -238,7 +253,7 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-/*** CARDS ***/
+// CARDS //
 .card {
     display: flex;
     justify-content: center;
@@ -297,7 +312,7 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-/*** BADGE ***/
+// BADGE //
 .badge {
     width: 80px;
     height: 29px;
@@ -318,15 +333,94 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-/*** OVERFLOW ***/
+// OVERFLOW //
 .overflow {
     overflow: hidden;
 }
 
+// MEDIA QUERY //
+@media only screen and (min-width:800px) {
+
+    .container--body,
+    #restaurants {
+        padding: 0px 50px;
+    }
+
+    .card__align {
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+
+    .steps {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 307px;
+
+        &__width {
+            width: 634px;
+        }
+    }
+
+    body {
+        padding: 0px;
+    }
+
+    .card {
+        min-width: 240px;
+        width: 100%;
+        max-width: 469px
+    }
+
+    .card__align {
+        @include flexWrap;
+    }
+
+    .hero-title__margin {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 172px;
+        padding-left: 0px;
+    }
+
+    .container--body {
+        gap: 15px;
+        margin: 20px 0px 25px 0px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .txt--footer {
+        min-width: 130px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        min-width: 100%;
+        padding: 10px;
+        padding-bottom: 40px;
+    }
+
+    .footer__logo {
+        order: 1;
+        margin: 0px;
+        margin-left: 20px;
+    }
+}
+
 /*
-* {
+{
     outline: 1px red solid !important;
     visibility: visible !important
 }
 */
-//Add flex-wrap/padding/min/max to media queries
