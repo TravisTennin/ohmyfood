@@ -127,8 +127,6 @@ footer {
 .banner--img {
   position: absolute;
   z-index: -1;
-}
-.banner--img__flex {
   display: flex;
   align-items: center;
 }
@@ -255,29 +253,29 @@ footer {
   text-overflow: ellipsis;
 }
 
-.steps__width:active .steps--p {
+.steps__width:hover .steps--p {
   width: 160px;
 }
-.steps__width:active .steps--p p {
+.steps__width:hover .steps--p p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
 }
-.steps__width:active .steps--p h4 {
+.steps__width:hover .steps--p h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
 }
-.steps__width:active .tick-box {
+.steps__width:hover .tick-box {
   animation: 1s slideToOrigin forwards 1, 1s spin infinite;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.steps__width:active .tick-box > .tick {
+.steps__width:hover .tick-box > .tick {
   animation: spin 0.75s linear 1;
 }
 

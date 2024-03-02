@@ -21,11 +21,8 @@
     &--img {
         position: absolute;
         z-index: -1;
-
-        &__flex {
-            display: flex;
-            align-items: center;
-        }
+        display: flex;
+        align-items: center;
     }
 
     &--heart {
@@ -184,7 +181,7 @@
     text-overflow: ellipsis;
 }
 
-.steps__width:active {
+.steps__width:hover {
     & .steps--p {
         width: 160px;
 
