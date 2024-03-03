@@ -378,6 +378,8 @@ a:active {
 
     .card__align {
         @include flexWrap;
+        max-width: 1440px;
+        width: 100%;
     }
 
     .hero-title__margin {
